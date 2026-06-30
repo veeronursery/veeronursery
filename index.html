@@ -1,40 +1,576 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>VEERO Nursery Plants</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#e8f5e9;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#eef8ee;
+color:#222;
+overflow-x:hidden;
+}
+
+header{
+
+background:linear-gradient(135deg,#0f8d37,#27ae60);
+
+color:#fff;
+
+padding:35px 20px;
+
 text-align:center;
+
+box-shadow:0 5px 15px rgba(0,0,0,.25);
+
 }
 
-.container{
-padding:30px 20px;
+.logo{
+
+width:160px;
+
+height:160px;
+
+border-radius:50%;
+
+border:5px solid white;
+
+object-fit:cover;
+
+background:white;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
 }
 
-h1{
-color:#1b5e20;
-font-size:34px;
+header h1{
+
+font-size:38px;
+
+margin-top:18px;
+
+font-weight:700;
+
 }
 
-p{
+header p{
+
+margin-top:12px;
+
 font-size:18px;
-color:#444;
+
+opacity:.95;
+
+}
+
+.hero{
+
+padding:50px 20px;
+
+text-align:center;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+color:#0b6d2a;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+line-height:1.8;
+
+max-width:800px;
+
+margin:auto;
+
 }
 
 .btn{
+
 display:block;
+
 width:90%;
-max-width:320px;
-margin:15px auto;
-padding:15px;
+
+max-width:420px;
+
+margin:18px auto;
+
+padding:18px;
+
+border-radius:60px;
+
+font-size:22px;
+
+font-weight:bold;
+
 text-decoration:none;
-font-size:20px;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.05);
+
+}
+
+.whatsapp{background:#25D366;}
+
+.call{background:#0d47a1;}
+
+.facebook{background:#1877F2;}
+
+.gallery{
+
+padding:50px 20px;
+
+background:white;
+
+}
+
+.gallery h2{
+
+text-align:center;
+
+font-size:34px;
+
+color:#0b6d2a;
+
+margin-bottom:30px;
+
+}
+
+.slider{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:20px;
+
+scroll-snap-type:x mandatory;
+
+padding-bottom:10px;
+
+}
+
+.slider img{
+
+width:320px;
+
+height:420px;
+
+border-radius:20px;
+
+object-fit:cover;
+
+scroll-snap-align:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+}
+
+.about{
+
+padding:60px 20px;
+
+background:#eef8ee;
+
+}
+
+.about h2{
+
+text-align:center;
+
+font-size:34px;
+
+margin-bottom:25px;
+
+color:#0b6d2a;
+
+}
+
+.about p{
+
+max-width:900px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+text-align:center;
+
+}
+
+.features{
+
+padding:60px 20px;
+
+background:white;
+
+}
+
+.features h2{
+
+text-align:center;
+
+font-size:34px;
+
+color:#0b6d2a;
+
+margin-bottom:35px;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.card{
+
+background:#f6fff6;
+
+padding:30px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h3{
+
+color:#0b6d2a;
+
+margin-bottom:12px;
+
+}
+
+.card p{
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+footer{
+
+background:#0f8d37;
+
+color:white;
+
+text-align:center;
+
+padding:25px;
+
+font-size:18px;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" class="logo" alt="VEERO Logo">
+
+<h1>🌿 VEERO Nursery Plants</h1>
+
+<p>Growing Nature • Enriching Life</p>
+
+</header>
+
+<section class="hero">
+
+<h2>Welcome to VEERO Nursery</h2>
+
+<p>
+
+VEERO Nursery Plants में आपका हार्दिक स्वागत है।
+
+हम उच्च गुणवत्ता वाले Indoor, Outdoor, Flowering,
+
+Fruit एवं Decorative Plants उचित मूल्य पर उपलब्ध कराते हैं।
+
+</p>
+
+<a href="https://wa.me/919456968629" class="btn whatsapp">
+💬 Chat on WhatsApp
+</a>
+
+<a href="tel:+919456968629" class="btn call">
+📞 Call Now
+</a>
+
+<a href="https://www.facebook.com/share/1EhGEa2RJP/" target="_blank" class="btn facebook">
+📘 Visit Facebook
+</a>
+
+</section>
+
+<section class="gallery">
+
+<h2>🌿 Our Nursery Gallery</h2>
+
+<div class="slider">
+
+<img src="photo1.jpg">
+
+<img src="photo2.jpg">
+
+<img src="photo3.jpg">
+
+<img src="photo4.jpg">
+
+<img src="photo5.jpg">
+
+</div>
+
+</section>
+
+<section class="about">
+
+<h2>About VEERO Nursery</h2>
+
+<p>
+
+VEERO Nursery Plants का उद्देश्य हर घर और हर जीवन में हरियाली लाना है।
+
+हम स्वस्थ, सुंदर और उच्च गुणवत्ता वाले पौधे उपलब्ध कराते हैं।
+
+हमारा लक्ष्य प्रकृति को बढ़ावा देना और प्रत्येक ग्राहक को सर्वोत्तम सेवा देना है।
+
+</p>
+
+</section>
+
+<section class="features">
+
+<h2>Why Choose VEERO?</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🌱 Healthy Plants</h3>
+
+<p>हम केवल स्वस्थ और अच्छी गुणवत्ता वाले पौधे उपलब्ध कराते हैं।</p>
+
+</div>
+
+<div class="card">
+
+<h3>💰 Best Price</h3>
+
+<p>उचित मूल्य पर शानदार क्वालिटी।</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚚 Fast Service</h3>
+
+<p>ग्राहकों को तेज़ और भरोसेमंद सेवा।</p>
+
+</div>
+
+<div class="card">
+
+<h3>😊 Customer Support</h3>
+
+<p>WhatsApp और Call पर तुरंत सहायता।</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌺 Indoor Plants</h3>
+
+<p>घर और ऑफिस के लिए सुंदर Indoor Plants।</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌳 Outdoor Plants</h3>
+
+<p>गार्डन और फार्महाउस के लिए बेहतरीन पौधे।</p>
+
+</div>
+
+<div class="card">
+
+<h3>🍋 Fruit Plants</h3>
+
+<p>आम, अमरूद, नींबू और अन्य फलदार पौधे।</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌸 Flower Plants</h3>
+
+<p>रंग-बिरंगे फूलों वाले पौधों का शानदार संग्रह।</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section style="padding:60px 20px;background:#ffffff;text-align:center;">
+
+<h2 style="font-size:34px;color:#0b6d2a;">📞 Contact VEERO Nursery</h2>
+
+<p style="margin-top:15px;font-size:18px;">
+📍 Ist Floor, Off. No.16, City Center Complex,<br>
+Delta-I, Greater Noida
+</p>
+
+<a href="https://wa.me/919456968629" class="btn whatsapp">
+💬 Order on WhatsApp
+</a>
+
+<a href="tel:+919456968629" class="btn call">
+📞 Call Now
+</a>
+
+<a href="https://www.facebook.com/share/1EhGEa2RJP/" class="btn facebook" target="_blank">
+📘 Facebook Page
+</a>
+
+</section>
+
+<footer>
+
+<h3>🌿 VEERO Nursery Plants</h3>
+
+<p>
+Growing Nature • Enriching Life
+</p>
+
+<p style="margin-top:10px;">
+© 2026 VEERO Nursery Plants. All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- Floating WhatsApp Button -->
+
+<a href="https://wa.me/919456968629"
+style="
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+text-decoration:none;
+color:white;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+z-index:9999;
+animation:pulse 2s infinite;
+">
+💬
+</a>
+
+<style>
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.12);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+</style>
+
+<script>
+
+// Welcome Message
+
+window.onload=function(){
+
+setTimeout(function(){
+
+alert("🌿 Welcome to VEERO Nursery Plants 🌿");
+
+},800);
+
+}
+
+</script>
+
+</body>
+
+</html>font-size:20px;
 font-weight:bold;
 border-radius:12px;
 color:white;
